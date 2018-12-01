@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Project 3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="reset.css" />
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="normalize.css" /> -->
+    <link rel="stylesheet" type="text/css" media="screen" href="newProject3.css" />
+
+</head>
+
+<body>
+    <header class="header">
+        <form action="/Project3/Project3interactive.html" method="GET">
+            <div class="searchrow">
+                <input name="search" type="search" placeholder="search here" id="search">
+                <input type="submit" id="submit" class="button" value="Search">
+            </div>
+            <div class="searchrow">
+                <input id="checkin" name="checkin" type="date" min=today required>
+                <input id="checkout" name="checkout" type="date" min="Date" required>
+                <select id="rooms" name="rooms">
+                    <option value="">All</option>
+                    <option value="family">Family rooms</option>
+                    <option value="single">Single</option>
+                    <option value="double">Double</option>
+                </select>
+            </div>
+            <div class="searchrow">
+                <div id="maxprice">
+                    <label for="maxprice-input">
+                        <span>Price</span>
+                        <span id="sliderPrice">max $10000</span>
+                    </label>
+                    <input id="maxprice-input" name="maxprice" min="0" max="10000" type="range" value="5000">
+                </div>
+
+                <label id="property">
+                    Property type
+                    <select name="property">
+                        <option value="">All</option>
+                        <option value="1">1 star</option>
+                        <option value="2">2 stars</option>
+                        <option value="3">3 stars</option>
+                        <option value="4">4 stars</option>
+                        <option value="5">5 stars</option>
+                    </select>
+                </label>
+                <label id="ratings">
+                    Guest rating
+                    <select name="rating">
+                        <option value="">All</option>
+                        <option value="2">0-2 Okay</option>
+                        <option value="6">2-6 Fair</option>
+                        <option value="7"> 6-7 Good</option>
+                        <option value="85">7-8.5 Very Good</option>
+                        <option value="10">8.5-10 Excellent</option>
+                    </select>
+                </label>
+                <label id="location">
+                    Hotel location
+                    <select name="location">
+                        <option value="">All</option>
+                        <option value="loc1">Location 1</option>
+                        <option value="loc2">Location 2</option>
+                        <option value="loc3">Location 3</option>
+                        <option value="loc4">Location 4</option>
+                        <option value="loc5">Location 5</option>
+                    </select>
+                </label>
+            </div>
+        </form>
+    </header>
+    <main class="main">
+        <section id="main-item1">
+            <div id="mapbutton">
+                <button type="button" class="button">View Map</button>
+            </div>
+
+            <div>
+                <label for="sort" style="color: black;"><strong>Sort by</strong></label>
+                <select name="sort" id="sort" style="margin-right: 10px;height: 30px;width: 250px;border-color: darkgray;">
+                    <option>Our recomendations</option>
+                    <option>Filter 1</option>
+                    <option>Filter 2</option>
+                    <option>Filter 3</option>
+                    <option>Filter 4</option>
+                    <option>Filter 5</option>
+                </select>
+
+            </div>
+            <img src="info.png" style="width: 25px;height: 25px;margin-top: 15px;margin-right: 10px;">
+        </section>
+        <section class="hotels">
+            <section class="hotel" id="hotel1">
+                    <img src="emptyheart.png" class="heart" style="width: 20px;height: 20px;position: absolute;padding: 10px;">
+                    <div id="room"><img src="room1.jpeg" id="img"></div>
+                <div id="hotel-info">
+                    <h3 >Hotel
+                        Lancaster</h3>
+                    <p><img src="star.png" style="width:10px;">
+                        <img src="star.png" style="width:10px;">
+                        <img src="star.png" style="width:10px;">
+                        <img src="star.png" style="width:10px;">
+                        <img src="star.png" style="width:10px;"> Hotel</p>
+                    <p>Paris,0.2 miles to Champs Elysees</p>
+                    <p><span id="rating">8.8</span><strong> Excellent</strong> (1736
+                        reviews)</p>
+                    <p>Excellent location (9.2/10)</p>
+                </div>
+                <div id="hotel-prices">
+                    <div id="website" >
+                        <button class="sites1" class="button">Hotel website<br> $706</button>
+                        <button class="sites1" class="button">Agoda <br>$575</button>
+                        <button class="sites1" class="button">Travelocity <br>$708</button>
+                        <select class="more-deals">
+                            <option><span style="font-weight:bolder;">More deals from <br> $575</span></option>
+                        </select>
+                    </div>
+
+                </div>
+                <div id="deals">
+                    <div id="deal1">
+                        More deals from <br> $575
+                    </div>
+                    <button id="view-deal" class="button">View Deal<img src="rightarrow.png" class="arrow" style="width: 20px;height: 20px;position:absolute;padding-left: 10px;"></button>
+
+                </div>
+            </section>
+            <section class="hotel" id="hotel2">
+                <img src="emptyheart.png" class="heart" style="width: 20px;height: 20px;position: absolute;padding: 10px;">
+                <div id="room"><img src="room2.jpeg" id="img"></div>
+                <div id="hotel-info">
+                    <h3>Prince
+                        de Galles, a Luxury Hotel</h3>
+                    <p><img src="star.png" style="width:10px;">
+                        <img src="star.png" style="width:10px;">
+                        <img src="star.png" style="width:10px;">
+                        <img src="star.png" style="width:10px;">
+                        <img src="star.png" style="width:10px;"> Hotel</p>
+                    <p>Paris,0.3 miles to Champs Elysees</p>
+                    <p><span id="rating">9.0</span><strong> Excellent</strong> (473
+                        reviews)</p>
+                    <p>Excellent location (9.4/10)</p>
+                </div>
+                <div id="hotel-prices">
+                    <div id="website">
+                        <button class="sites2">Orbitz<br> $1.213</button>
+                        <button class="sites2">Trip.com<br> $1.249</button>
+                        <button class="sites2">Expedia<br> $1.213</button>
+
+                        <select class="more-deals">
+                            <option>More deals from<br> $1.213</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="deals">
+                    <div id="deal2">
+                        More deals from<br> $1.213
+                    </div>
+                    <button id="view-deal" class="button">View Deal<img src="rightarrow.png" class="arrow" style="width: 20px;height: 20px;position: absolute;padding-left: 10px;"></button>
+
+                </div>
+            </section>
+        </section>
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="newProject3.js"></script>
+</body>
+
+</html>

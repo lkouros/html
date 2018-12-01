@@ -1,0 +1,350 @@
+ * {
+     /* box-sizing: border-box; */
+     font-family: 'Ubuntu', sans-serif;
+
+ }
+
+ body {
+     display:flex;
+     flex-direction:column;
+     margin-right: 20vw;
+     margin-left: 20vw;
+     font-family: 'Open Sans', sans-serif;
+     color: #37454d;
+     
+ }
+
+ p {
+     font-size: 0.8em
+ }
+
+ h3{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;width:250px;
+ }
+
+ input,
+ select {
+     border: 0;
+     border-radius: 3px;
+ }
+
+ select {
+     appearance: none;
+ }
+
+ label {
+     color: white;
+ }
+
+ .header {
+     flex:1 1 0;
+     background-color: #37454d;
+     padding-left: 10px;
+     padding-top: 10px;
+     padding-right: 10px;
+     padding-bottom: 5px;
+     
+ }
+
+ .searchrow {
+     display: flex;
+     margin-bottom: 10px;
+ }
+
+ /*.searchrow >#search */
+ #search {
+     flex: 6 1 0;
+     background-image: url("Search-icon.png");
+     background-repeat: no-repeat;
+     background-size: 25px;
+     background-position: 10px center;
+     border-bottom-right-radius: 0;
+     border-top-right-radius: 0;
+ }
+
+ #checkin,
+ #checkout {
+     background-image: url("calendar.png");
+     background-repeat: no-repeat;
+     background-size: 25px;
+     background-position: 10px center;
+ }
+
+ /*.searchrow >#submit */
+ #submit {
+     flex: 1 1 0;
+     background-color: #007fad;
+     color: white;
+     border-bottom-left-radius: 0;
+     border-top-left-radius: 0;
+ }
+
+ /*.searchrow>#checkin */
+ #checkin {
+     flex: 1 1 0;
+     border-left: 8px #007fad solid;
+
+ }
+
+ /*.searchrow>#checkout */
+ #checkout {
+     flex: 1 1 0;
+     border-left: 8px orange solid;
+     margin-right: 5px;
+     margin-left: 5px;
+ }
+
+ /*.searchrow>#rooms */
+ #rooms {
+     flex: 1 1 0;
+     border-style: dotted solid;
+     border-color: #0000004d;
+     padding: 5px;
+
+ }
+
+ /*.searchrow>#maxprice */
+ #maxprice {
+     flex: 2 1 0;
+     display: flex;
+     flex-direction: column;
+     padding-right: 5px;
+     border-right: 1px #697379 solid;
+ }
+
+ .searchrow>#maxprice>label {
+     display: flex;
+     justify-content: space-between;
+
+ }
+
+ /*.searchrow>#property */
+ #property {
+     flex: 1 1 0;
+     padding-right: 5px;
+     padding-left: 5px;
+     border-right: 1px #697379 solid;
+
+ }
+
+ #property>select,
+ #ratings>select,
+ #location>select {
+     background-color: transparent;
+     color: white;
+ }
+
+ /*.searchrow>#location */
+ #location {
+     flex: 2 1 0;
+     padding-right: 5px;
+
+ }
+
+ /*.searchrow>#ratings */
+ #ratings {
+     flex: 1 1 0;
+     padding-right: 5px;
+     padding-left: 5px;
+     border-right: 1px #697379 solid;
+ }
+
+ .searchrow>#maxprice>#maxprice-input,
+ .searchrow>#ratings>select,
+ .searchrow>#property>select,
+ .searchrow>#location>select {
+     width: 100%;
+ }
+
+ input[type="search"],
+ input[type="date"] {
+     padding-top: 10px;
+     padding-bottom: 10px;
+     padding-left: 40px;
+
+ }
+
+ .main {
+     flex:1 1 0;
+     display:flex;
+     flex-direction: column;
+     background-color: #ebeced;
+     padding-left: 10px;
+     height: 100%; 
+    }
+
+ #mapbutton {
+     flex: 1 1 0;
+     margin-left: 20px;
+     padding-bottom: 20px;
+     padding-top: 10px;
+ }
+
+ #sort {
+     flex: 1 1 0;
+     margin-right: 20px;
+     margin-top: 15px;
+     background-color: white;
+     border: 1px solid;
+ }
+
+ #main-item1 {
+     flex:1 1 0;
+     display: flex;
+     justify-content: space-between;
+     background-image: url("map.gif");
+     background-size: 160px 50px;
+     background-repeat: no-repeat;
+     background-position-y: 5px;
+     height: 100%;
+ }
+
+ .hotels {
+     flex :2 1 0;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     border-color: darkgray;
+     padding-right: 10px;
+     
+ }
+
+ .hotel {
+     display: flex;
+     flex: 1 1 0;
+     background-color: white;
+     margin-bottom: 5px;
+     margin-top: 5px;
+     width: 100%;
+ }
+
+ #img {
+     flex: 1 1 0;
+     width: 200px;
+     height: 200px;
+     padding-top: 5px;
+     padding-bottom: 5px;
+     padding-right: 5px;
+     padding-left: 5px;
+
+ }
+
+ #hotel-info {
+     flex: 1.5 1 0;
+
+ }
+
+ #rating {
+
+     background-color: green;
+     color: white;
+     padding-top: 5px;
+     padding-left: 5px;
+     padding-right: 5px;
+     padding-bottom: 5px;
+ }
+
+ #website {
+     flex: 3 1 0;
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+
+ }
+
+ #website>select {
+     border-top: 1px solid lightgrey;
+ }
+
+ #hotel-prices {
+     flex: 0.5 1 0;
+     border-right-width: 1px;
+     border-right-style: solid;
+     border-color: darkgray;
+     border-left-width: 1px;
+     border-left-style: solid;
+     border-color: darkgray;
+     display: flex;
+     flex-flow: column;
+     margin-top: 10px;
+     justify-content: space-around;
+     margin-bottom: 15px;
+     text-align: center;
+     padding-right: 10px;
+     padding-left: 10px;
+ }
+
+
+ .sites1,
+ .sites2 {
+     width: 100%;
+     text-align: center;
+     font-size: 0.8em;
+     color: #726d6d;
+     flex: 1 1 0;
+     margin-bottom: 5px;
+     border-style: none;
+     border-radius: 4px;
+     background-color: transparent;
+ }
+
+ #deals {
+     flex: 1 1 0;
+     margin-left: 3px;
+     margin-top: 3px;
+     margin-right: 3px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     text-align: center;
+ }
+
+ #deal1,
+ #deal2 {
+     justify-items: center;
+     justify-content: center;
+     flex: 3 1 0;
+     color: green;
+     width: 100%;
+     padding-top: 50px;
+ }
+
+ #view-deal {
+     flex: 1 1 0;
+     background-color: green;
+     color: white;
+     width: 100%;
+     background-image: url("righticon.png");
+ }
+
+ .more-deals {
+     width: 100%;
+     font-size: 0.8em;
+     text-overflow: ellipsis;
+     flex: 0.5 1 0;
+     font-weight: 500;
+ }
+
+ /*css hover effects*/
+ .button:hover {
+     background-color: white;
+     color: 007fad;
+ }
+
+ #submit:hover {
+     background-color: darkgray;
+     color: #007fad;
+ }
+
+ #view-deal:hover {
+     background-color: white;
+     color: green;
+ }
+ 
+ .sites1:hover,
+ .sites2:hover {
+     background-color: rgb(154, 196, 196);
+ }
